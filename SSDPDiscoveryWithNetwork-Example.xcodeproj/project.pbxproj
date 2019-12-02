@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C24FE58B2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */; };
+		C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */; };
+		C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE598238593DE00070DA4 /* AppDelegate.swift */; };
+		C24FE5A4238593DE00070DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24FE59B238593DE00070DA4 /* LaunchScreen.storyboard */; };
+		C24FE5A5238593DE00070DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24FE59D238593DE00070DA4 /* Main.storyboard */; };
+		C24FE5A6238593DE00070DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24FE5A0238593DE00070DA4 /* Assets.xcassets */; };
+		C24FE5A823859BD300070DA4 /* SSDPResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5A723859BD300070DA4 /* SSDPResponseTableViewCell.swift */; };
+		C24FE5AE23859C1600070DA4 /* SSDPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AA23859C1600070DA4 /* SSDPService.swift */; };
+		C24FE5AF23859C1600070DA4 /* SSDPServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */; };
+		C24FE5B023859C1600070DA4 /* SSDPSearchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */; };
+		C24FE5B123859C1600070DA4 /* SSDPSearchSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C24FE5872385916A00070DA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C24FE56A2385916800070DA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C24FE5712385916800070DA4;
+			remoteInfo = "SSDPDiscoveryWithNetwork-Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryWithNetwork_ExampleTests.swift; sourceTree = "<group>"; };
+		C24FE58C2385916A00070DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryViewController.swift; sourceTree = "<group>"; };
+		C24FE598238593DE00070DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C24FE599238593DE00070DA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24FE59C238593DE00070DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C24FE59E238593DE00070DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C24FE5A0238593DE00070DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C24FE5A723859BD300070DA4 /* SSDPResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPResponseTableViewCell.swift; sourceTree = "<group>"; };
+		C24FE5AA23859C1600070DA4 /* SSDPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPService.swift; sourceTree = "<group>"; };
+		C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPServiceParser.swift; sourceTree = "<group>"; };
+		C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSession.swift; sourceTree = "<group>"; };
+		C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSessionConfiguration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C24FE56F2385916800070DA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24FE5832385916A00070DA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C24FE5692385916800070DA4 = {
+			isa = PBXGroup;
+			children = (
+				C24FE5742385916800070DA4 /* SSDPDiscoveryWithNetwork-Example */,
+				C24FE5892385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests */,
+				C24FE5732385916800070DA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C24FE5732385916800070DA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */,
+				C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C24FE5742385916800070DA4 /* SSDPDiscoveryWithNetwork-Example */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE597238593DE00070DA4 /* Application */,
+				C24FE5A923859C1600070DA4 /* Networking */,
+				C24FE59F238593DE00070DA4 /* Resources */,
+				C24FE59A238593DE00070DA4 /* Storyboards */,
+				C24FE595238593DE00070DA4 /* ViewControllers */,
+			);
+			path = "SSDPDiscoveryWithNetwork-Example";
+			sourceTree = "<group>";
+		};
+		C24FE5892385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */,
+				C24FE58C2385916A00070DA4 /* Info.plist */,
+			);
+			path = "SSDPDiscoveryWithNetwork-ExampleTests";
+			sourceTree = "<group>";
+		};
+		C24FE595238593DE00070DA4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */,
+				C24FE5A723859BD300070DA4 /* SSDPResponseTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C24FE597238593DE00070DA4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE598238593DE00070DA4 /* AppDelegate.swift */,
+				C24FE599238593DE00070DA4 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C24FE59A238593DE00070DA4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE59B238593DE00070DA4 /* LaunchScreen.storyboard */,
+				C24FE59D238593DE00070DA4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C24FE59F238593DE00070DA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE5A0238593DE00070DA4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C24FE5A923859C1600070DA4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C24FE5AA23859C1600070DA4 /* SSDPService.swift */,
+				C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */,
+				C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */,
+				C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C24FE5712385916800070DA4 /* SSDPDiscoveryWithNetwork-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C24FE58F2385916A00070DA4 /* Build configuration list for PBXNativeTarget "SSDPDiscoveryWithNetwork-Example" */;
+			buildPhases = (
+				C24FE56E2385916800070DA4 /* Sources */,
+				C24FE56F2385916800070DA4 /* Frameworks */,
+				C24FE5702385916800070DA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SSDPDiscoveryWithNetwork-Example";
+			productName = "SSDPDiscoveryWithNetwork-Example";
+			productReference = C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C24FE5852385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C24FE5922385916A00070DA4 /* Build configuration list for PBXNativeTarget "SSDPDiscoveryWithNetwork-ExampleTests" */;
+			buildPhases = (
+				C24FE5822385916A00070DA4 /* Sources */,
+				C24FE5832385916A00070DA4 /* Frameworks */,
+				C24FE5842385916A00070DA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C24FE5882385916A00070DA4 /* PBXTargetDependency */,
+			);
+			name = "SSDPDiscoveryWithNetwork-ExampleTests";
+			productName = "SSDPDiscoveryWithNetwork-ExampleTests";
+			productReference = C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C24FE56A2385916800070DA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "William Boles";
+				TargetAttributes = {
+					C24FE5712385916800070DA4 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					C24FE5852385916A00070DA4 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C24FE5712385916800070DA4;
+					};
+				};
+			};
+			buildConfigurationList = C24FE56D2385916800070DA4 /* Build configuration list for PBXProject "SSDPDiscoveryWithNetwork-Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C24FE5692385916800070DA4;
+			productRefGroup = C24FE5732385916800070DA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C24FE5712385916800070DA4 /* SSDPDiscoveryWithNetwork-Example */,
+				C24FE5852385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C24FE5702385916800070DA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24FE5A5238593DE00070DA4 /* Main.storyboard in Resources */,
+				C24FE5A6238593DE00070DA4 /* Assets.xcassets in Resources */,
+				C24FE5A4238593DE00070DA4 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24FE5842385916A00070DA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C24FE56E2385916800070DA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24FE5A823859BD300070DA4 /* SSDPResponseTableViewCell.swift in Sources */,
+				C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */,
+				C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */,
+				C24FE5B123859C1600070DA4 /* SSDPSearchSessionConfiguration.swift in Sources */,
+				C24FE5AE23859C1600070DA4 /* SSDPService.swift in Sources */,
+				C24FE5B023859C1600070DA4 /* SSDPSearchSession.swift in Sources */,
+				C24FE5AF23859C1600070DA4 /* SSDPServiceParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24FE5822385916A00070DA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24FE58B2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C24FE5882385916A00070DA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C24FE5712385916800070DA4 /* SSDPDiscoveryWithNetwork-Example */;
+			targetProxy = C24FE5872385916A00070DA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C24FE59B238593DE00070DA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24FE59C238593DE00070DA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C24FE59D238593DE00070DA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24FE59E238593DE00070DA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C24FE58D2385916A00070DA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C24FE58E2385916A00070DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C24FE5902385916A00070DA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-Example/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamboles.SSDPDiscoveryWithNetwork-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C24FE5912385916A00070DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-Example/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamboles.SSDPDiscoveryWithNetwork-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C24FE5932385916A00070DA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamboles.SSDPDiscoveryWithNetwork-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSDPDiscoveryWithNetwork-Example.app/SSDPDiscoveryWithNetwork-Example";
+			};
+			name = Debug;
+		};
+		C24FE5942385916A00070DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamboles.SSDPDiscoveryWithNetwork-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSDPDiscoveryWithNetwork-Example.app/SSDPDiscoveryWithNetwork-Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C24FE56D2385916800070DA4 /* Build configuration list for PBXProject "SSDPDiscoveryWithNetwork-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24FE58D2385916A00070DA4 /* Debug */,
+				C24FE58E2385916A00070DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C24FE58F2385916A00070DA4 /* Build configuration list for PBXNativeTarget "SSDPDiscoveryWithNetwork-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24FE5902385916A00070DA4 /* Debug */,
+				C24FE5912385916A00070DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C24FE5922385916A00070DA4 /* Build configuration list for PBXNativeTarget "SSDPDiscoveryWithNetwork-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24FE5932385916A00070DA4 /* Debug */,
+				C24FE5942385916A00070DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C24FE56A2385916800070DA4 /* Project object */;
+}
