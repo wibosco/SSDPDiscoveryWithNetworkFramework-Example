@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DCDC574270E3B5100E1E2C3 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */; };
 		C24FE58B2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */; };
 		C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */; };
 		C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE598238593DE00070DA4 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
 		C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryWithNetwork_ExampleTests.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DCDC572270E3B3C00E1E2C3 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		C24FE5692385916800070DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		C24FE5A923859C1600070DA4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3DCDC572270E3B3C00E1E2C3 /* Factories */,
 				C24FE5AA23859C1600070DA4 /* SSDPService.swift */,
 				C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */,
 				C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */,
@@ -196,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "William Boles";
 				TargetAttributes = {
 					C24FE5712385916800070DA4 = {
@@ -254,6 +265,7 @@
 			files = (
 				C24FE5A823859BD300070DA4 /* SSDPResponseTableViewCell.swift in Sources */,
 				C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */,
+				3DCDC574270E3B5100E1E2C3 /* DateFactory.swift in Sources */,
 				C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */,
 				C24FE5B123859C1600070DA4 /* SSDPSearchSessionConfiguration.swift in Sources */,
 				C24FE5AE23859C1600070DA4 /* SSDPService.swift in Sources */,
@@ -326,6 +338,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -351,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,6 +400,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -406,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

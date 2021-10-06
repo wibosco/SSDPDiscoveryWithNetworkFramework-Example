@@ -1,8 +1,8 @@
 //
 //  SSDPSearchResponse.swift
-//  SSDP-Example
+//  SSDPDiscoveryWithNetwork-Example
 //
-//  Created by William Boles on 17/02/2019.
+//  Created by William Boles on 20/11/2019.
 //  Copyright © 2019 William Boles. All rights reserved.
 //
 

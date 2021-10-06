@@ -2,7 +2,7 @@
 //  SSDPDiscoveryWithNetwork_ExampleTests.swift
 //  SSDPDiscoveryWithNetwork-ExampleTests
 //
-//  Created by Boles, William (Developer) on 20/11/2019.
+//  Created by William Boles on 20/11/2019.
 //  Copyright © 2019 William Boles. All rights reserved.
 //
 
