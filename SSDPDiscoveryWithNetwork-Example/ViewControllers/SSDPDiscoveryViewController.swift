@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SSDPDiscoveryWithNetwork-Example
 //
-//  Created by Boles, William (Developer) on 20/11/2019.
+//  Created by William Boles on 20/11/2019.
 //  Copyright © 2019 William Boles. All rights reserved.
 //
 
@@ -55,7 +55,7 @@ class SSDPDiscoveryViewController: UIViewController, SSDPSearchSessionDelegate, 
         }
     }
     
-    func searchSession(_ searchSession: SSDPSearchSession, didAbortWithError error: SSDPSearchSessionError) {
+    func searchSession(_ searchSession: SSDPSearchSession, didEncounterError error: SSDPSearchSessionError) {
         guard self.searchSession === searchSession else {
             return
         }
