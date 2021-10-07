@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DC9E57C270F00F90039B3E4 /* MockSSDPSearchSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E570270F00F90039B3E4 /* MockSSDPSearchSessionDelegate.swift */; };
+		3DC9E57D270F00F90039B3E4 /* MockSSDPServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E571270F00F90039B3E4 /* MockSSDPServiceParser.swift */; };
+		3DC9E580270F00F90039B3E4 /* MockDateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E574270F00F90039B3E4 /* MockDateFactory.swift */; };
+		3DC9E584270F00F90039B3E4 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E579270F00F90039B3E4 /* TestError.swift */; };
+		3DC9E588270F01940039B3E4 /* SSDPServiceParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E585270F01940039B3E4 /* SSDPServiceParserTests.swift */; };
+		3DC9E589270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E586270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift */; };
 		3DCDC574270E3B5100E1E2C3 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */; };
-		C24FE58B2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */; };
 		C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */; };
 		C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE598238593DE00070DA4 /* AppDelegate.swift */; };
 		C24FE5A4238593DE00070DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24FE59B238593DE00070DA4 /* LaunchScreen.storyboard */; };
@@ -32,11 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DC9E56E270F00F90039B3E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DC9E570270F00F90039B3E4 /* MockSSDPSearchSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSSDPSearchSessionDelegate.swift; sourceTree = "<group>"; };
+		3DC9E571270F00F90039B3E4 /* MockSSDPServiceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSSDPServiceParser.swift; sourceTree = "<group>"; };
+		3DC9E574270F00F90039B3E4 /* MockDateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDateFactory.swift; sourceTree = "<group>"; };
+		3DC9E579270F00F90039B3E4 /* TestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		3DC9E585270F01940039B3E4 /* SSDPServiceParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPServiceParserTests.swift; sourceTree = "<group>"; };
+		3DC9E586270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSessionConfigurationTests.swift; sourceTree = "<group>"; };
 		3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
 		C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryWithNetwork_ExampleTests.swift; sourceTree = "<group>"; };
-		C24FE58C2385916A00070DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryViewController.swift; sourceTree = "<group>"; };
 		C24FE598238593DE00070DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C24FE599238593DE00070DA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +78,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DC9E56B270F00F90039B3E4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E586270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift */,
+				3DC9E585270F01940039B3E4 /* SSDPServiceParserTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3DC9E56D270F00F90039B3E4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E56E270F00F90039B3E4 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3DC9E56F270F00F90039B3E4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E570270F00F90039B3E4 /* MockSSDPSearchSessionDelegate.swift */,
+				3DC9E571270F00F90039B3E4 /* MockSSDPServiceParser.swift */,
+				3DC9E574270F00F90039B3E4 /* MockDateFactory.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3DC9E578270F00F90039B3E4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E579270F00F90039B3E4 /* TestError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3DCDC572270E3B3C00E1E2C3 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +154,10 @@
 		C24FE5892385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				C24FE58A2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift */,
-				C24FE58C2385916A00070DA4 /* Info.plist */,
+				3DC9E56D270F00F90039B3E4 /* Application */,
+				3DC9E578270F00F90039B3E4 /* Helpers */,
+				3DC9E56F270F00F90039B3E4 /* Mocks */,
+				3DC9E56B270F00F90039B3E4 /* Tests */,
 			);
 			path = "SSDPDiscoveryWithNetwork-ExampleTests";
 			sourceTree = "<group>";
@@ -278,7 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C24FE58B2385916A00070DA4 /* SSDPDiscoveryWithNetwork_ExampleTests.swift in Sources */,
+				3DC9E57D270F00F90039B3E4 /* MockSSDPServiceParser.swift in Sources */,
+				3DC9E589270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift in Sources */,
+				3DC9E580270F00F90039B3E4 /* MockDateFactory.swift in Sources */,
+				3DC9E584270F00F90039B3E4 /* TestError.swift in Sources */,
+				3DC9E588270F01940039B3E4 /* SSDPServiceParserTests.swift in Sources */,
+				3DC9E57C270F00F90039B3E4 /* MockSSDPSearchSessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +522,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Info.plist";
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +542,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Info.plist";
+				INFOPLIST_FILE = "SSDPDiscoveryWithNetwork-ExampleTests/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

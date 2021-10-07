@@ -56,18 +56,14 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
     // MARK: - Init
     
     init?(configuration: SSDPSearchSessionConfiguration, parser: SSDPServiceParserProtocol = SSDPServiceParser()) {
-        guard let port = NWEndpoint.Port(rawValue: UInt16(configuration.port)) else {
-            fatalError("Attempted to use an invalid port")
-        }
-        let host = NWEndpoint.Host(configuration.host)
-        let endpoint = NWEndpoint.hostPort(host: host, port: port)
-        
-        guard let multicastGroup = try? NWMulticastGroup(for: [endpoint]) else {
+        guard let multicastGroup = try? NWMulticastGroup(for: [.hostPort(host: .ssdp, port: .ssdp)]) else {
             fatalError("Failed to create multicast group")
         }
         
-        self.connectionGroup = NWConnectionGroup(with: multicastGroup, using: .udp)
+        let parameters = NWParameters.udp
+        parameters.allowLocalEndpointReuse = true
         
+        self.connectionGroup = NWConnectionGroup(with: multicastGroup, using: parameters)
         self.configuration = configuration
         self.parser = parser
         self.searchTimeout = (TimeInterval(configuration.maximumBroadcastsBeforeClosing) * configuration.maximumWaitResponseTime) + 0.1
@@ -82,10 +78,12 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
         }
         
         os_log(.info, "SSDP search session starting")
-        connectionGroup.stateUpdateHandler = connectionStateDidChange(to:)
-        connectionGroup.setReceiveHandler(maximumMessageSize: 8767, rejectOversizedMessages: true) { message, content, isComplete in
+        // the maximumMessageSize value has been choosen at random
+        connectionGroup.setReceiveHandler { message, content, isComplete in
             self.messageReceived(message: message, content: content, isComplete: isComplete)
         }
+        
+        connectionGroup.stateUpdateHandler = connectionStateDidChange(to:)
         connectionGroup.start(queue: listeningQueue)
         
         timeoutTimer = Timer.scheduledTimer(withTimeInterval: searchTimeout, repeats: false, block: { [weak self] (timer) in
@@ -149,14 +147,14 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
             let interval = window / TimeInterval((configuration.maximumBroadcastsBeforeClosing - 1))
             
             broadcastTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { [weak self] (timer) in
-                self?.writeMessageToConnection(message)
+                self?.writeMessage(message)
             })
         }
                 
-        writeMessageToConnection(message)
+        writeMessage(message)
     }
     
-    private func writeMessageToConnection(_ message: String) {
+    private func writeMessage(_ message: String) {
         os_log(.info, "Writing to connection: \r%{public}@", message)
         
         let data = message.data(using: .utf8)
@@ -189,4 +187,12 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
     private func searchedForService(_ service: SSDPService) -> Bool {
         return service.searchTarget.contains(configuration.searchTarget) || configuration.searchTarget == "ssdp:all"
     }
+}
+
+private extension NWEndpoint.Port {
+    static let ssdp: NWEndpoint.Port = 1900
+}
+
+private extension NWEndpoint.Host {
+    static let ssdp: NWEndpoint.Host = "239.255.255.250"
 }
