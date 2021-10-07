@@ -13,17 +13,19 @@
 		3DC9E584270F00F90039B3E4 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E579270F00F90039B3E4 /* TestError.swift */; };
 		3DC9E588270F01940039B3E4 /* SSDPServiceParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E585270F01940039B3E4 /* SSDPServiceParserTests.swift */; };
 		3DC9E589270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E586270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift */; };
-		3DCDC574270E3B5100E1E2C3 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */; };
+		3DC9E59D270F23BF0039B3E4 /* MulticastConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E592270F23BF0039B3E4 /* MulticastConnectionController.swift */; };
+		3DC9E59E270F23BF0039B3E4 /* ConnectionControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E594270F23BF0039B3E4 /* ConnectionControllerFactory.swift */; };
+		3DC9E5A0270F23C00039B3E4 /* SSDPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E597270F23BF0039B3E4 /* SSDPService.swift */; };
+		3DC9E5A1270F23C00039B3E4 /* SSDPServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E598270F23BF0039B3E4 /* SSDPServiceParser.swift */; };
+		3DC9E5A2270F23C00039B3E4 /* SSDPSearchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E599270F23BF0039B3E4 /* SSDPSearchSession.swift */; };
+		3DC9E5A3270F23C00039B3E4 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E59B270F23BF0039B3E4 /* DateFactory.swift */; };
+		3DC9E5A4270F23C00039B3E4 /* SSDPSearchSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9E59C270F23BF0039B3E4 /* SSDPSearchSessionConfiguration.swift */; };
 		C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */; };
 		C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE598238593DE00070DA4 /* AppDelegate.swift */; };
 		C24FE5A4238593DE00070DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24FE59B238593DE00070DA4 /* LaunchScreen.storyboard */; };
 		C24FE5A5238593DE00070DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24FE59D238593DE00070DA4 /* Main.storyboard */; };
 		C24FE5A6238593DE00070DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24FE5A0238593DE00070DA4 /* Assets.xcassets */; };
 		C24FE5A823859BD300070DA4 /* SSDPResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5A723859BD300070DA4 /* SSDPResponseTableViewCell.swift */; };
-		C24FE5AE23859C1600070DA4 /* SSDPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AA23859C1600070DA4 /* SSDPService.swift */; };
-		C24FE5AF23859C1600070DA4 /* SSDPServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */; };
-		C24FE5B023859C1600070DA4 /* SSDPSearchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */; };
-		C24FE5B123859C1600070DA4 /* SSDPSearchSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,13 @@
 		3DC9E579270F00F90039B3E4 /* TestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		3DC9E585270F01940039B3E4 /* SSDPServiceParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPServiceParserTests.swift; sourceTree = "<group>"; };
 		3DC9E586270F01940039B3E4 /* SSDPSearchSessionConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSessionConfigurationTests.swift; sourceTree = "<group>"; };
-		3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
+		3DC9E592270F23BF0039B3E4 /* MulticastConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastConnectionController.swift; sourceTree = "<group>"; };
+		3DC9E594270F23BF0039B3E4 /* ConnectionControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionControllerFactory.swift; sourceTree = "<group>"; };
+		3DC9E597270F23BF0039B3E4 /* SSDPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPService.swift; sourceTree = "<group>"; };
+		3DC9E598270F23BF0039B3E4 /* SSDPServiceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPServiceParser.swift; sourceTree = "<group>"; };
+		3DC9E599270F23BF0039B3E4 /* SSDPSearchSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSession.swift; sourceTree = "<group>"; };
+		3DC9E59B270F23BF0039B3E4 /* DateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
+		3DC9E59C270F23BF0039B3E4 /* SSDPSearchSessionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSessionConfiguration.swift; sourceTree = "<group>"; };
 		C24FE5722385916800070DA4 /* SSDPDiscoveryWithNetwork-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FE5862385916A00070DA4 /* SSDPDiscoveryWithNetwork-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SSDPDiscoveryWithNetwork-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FE596238593DE00070DA4 /* SSDPDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryViewController.swift; sourceTree = "<group>"; };
@@ -54,10 +62,6 @@
 		C24FE59E238593DE00070DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C24FE5A0238593DE00070DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24FE5A723859BD300070DA4 /* SSDPResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPResponseTableViewCell.swift; sourceTree = "<group>"; };
-		C24FE5AA23859C1600070DA4 /* SSDPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPService.swift; sourceTree = "<group>"; };
-		C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPServiceParser.swift; sourceTree = "<group>"; };
-		C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSession.swift; sourceTree = "<group>"; };
-		C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPSearchSessionConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +117,39 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		3DCDC572270E3B3C00E1E2C3 /* Factories */ = {
+		3DC9E591270F23BF0039B3E4 /* Connections */ = {
 			isa = PBXGroup;
 			children = (
-				3DCDC573270E3B5100E1E2C3 /* DateFactory.swift */,
+				3DC9E593270F23BF0039B3E4 /* Factories */,
+				3DC9E592270F23BF0039B3E4 /* MulticastConnectionController.swift */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
+		3DC9E593270F23BF0039B3E4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E594270F23BF0039B3E4 /* ConnectionControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		3DC9E596270F23BF0039B3E4 /* SSDP */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E59A270F23BF0039B3E4 /* Factories */,
+				3DC9E599270F23BF0039B3E4 /* SSDPSearchSession.swift */,
+				3DC9E59C270F23BF0039B3E4 /* SSDPSearchSessionConfiguration.swift */,
+				3DC9E597270F23BF0039B3E4 /* SSDPService.swift */,
+				3DC9E598270F23BF0039B3E4 /* SSDPServiceParser.swift */,
+			);
+			path = SSDP;
+			sourceTree = "<group>";
+		};
+		3DC9E59A270F23BF0039B3E4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9E59B270F23BF0039B3E4 /* DateFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -200,11 +233,8 @@
 		C24FE5A923859C1600070DA4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3DCDC572270E3B3C00E1E2C3 /* Factories */,
-				C24FE5AA23859C1600070DA4 /* SSDPService.swift */,
-				C24FE5AB23859C1600070DA4 /* SSDPServiceParser.swift */,
-				C24FE5AC23859C1600070DA4 /* SSDPSearchSession.swift */,
-				C24FE5AD23859C1600070DA4 /* SSDPSearchSessionConfiguration.swift */,
+				3DC9E591270F23BF0039B3E4 /* Connections */,
+				3DC9E596270F23BF0039B3E4 /* SSDP */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -310,14 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC9E59D270F23BF0039B3E4 /* MulticastConnectionController.swift in Sources */,
+				3DC9E5A4270F23C00039B3E4 /* SSDPSearchSessionConfiguration.swift in Sources */,
+				3DC9E5A3270F23C00039B3E4 /* DateFactory.swift in Sources */,
+				3DC9E5A1270F23C00039B3E4 /* SSDPServiceParser.swift in Sources */,
+				3DC9E5A0270F23C00039B3E4 /* SSDPService.swift in Sources */,
+				3DC9E5A2270F23C00039B3E4 /* SSDPSearchSession.swift in Sources */,
+				3DC9E59E270F23BF0039B3E4 /* ConnectionControllerFactory.swift in Sources */,
 				C24FE5A823859BD300070DA4 /* SSDPResponseTableViewCell.swift in Sources */,
 				C24FE5A2238593DE00070DA4 /* AppDelegate.swift in Sources */,
-				3DCDC574270E3B5100E1E2C3 /* DateFactory.swift in Sources */,
 				C24FE5A1238593DE00070DA4 /* SSDPDiscoveryViewController.swift in Sources */,
-				C24FE5B123859C1600070DA4 /* SSDPSearchSessionConfiguration.swift in Sources */,
-				C24FE5AE23859C1600070DA4 /* SSDPService.swift in Sources */,
-				C24FE5B023859C1600070DA4 /* SSDPSearchSession.swift in Sources */,
-				C24FE5AF23859C1600070DA4 /* SSDPServiceParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

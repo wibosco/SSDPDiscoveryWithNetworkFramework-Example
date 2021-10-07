@@ -27,14 +27,12 @@ protocol SSDPSearchSessionProtocol {
     func stopSearch()
 }
 
-class SSDPSearchSession: SSDPSearchSessionProtocol {
+class SSDPSearchSession: SSDPSearchSessionProtocol, MulticastConnectionControllerDelegate {
     weak var delegate: SSDPSearchSessionDelegate?
     
-    private let connectionGroup: NWConnectionGroup
+    private let connectionController: MulticastConnectionControllerProtocol
     private let configuration: SSDPSearchSessionConfiguration
     private let parser: SSDPServiceParserProtocol
-    
-    private let listeningQueue = DispatchQueue(label: "com.williamboles.listening.queue",  attributes: .concurrent)
     
     private var servicesFoundDuringSearch = [SSDPService]()
     
@@ -55,18 +53,16 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
     
     // MARK: - Init
     
-    init?(configuration: SSDPSearchSessionConfiguration, parser: SSDPServiceParserProtocol = SSDPServiceParser()) {
-        guard let multicastGroup = try? NWMulticastGroup(for: [.hostPort(host: .ssdp, port: .ssdp)]) else {
-            fatalError("Failed to create multicast group")
+    init?(configuration: SSDPSearchSessionConfiguration, connectionControllerFactory: ConnectionControllerFactoryProtocol = ConnectionControllerFactory(), parser: SSDPServiceParserProtocol = SSDPServiceParser()) {
+        guard let connectionController = connectionControllerFactory.createMulticastConnectionController(host: configuration.host, port: configuration.port, callbackQueue: .main) else {
+            return nil
         }
-        
-        let parameters = NWParameters.udp
-        parameters.allowLocalEndpointReuse = true
-        
-        self.connectionGroup = NWConnectionGroup(with: multicastGroup, using: parameters)
         self.configuration = configuration
+        self.connectionController = connectionController
         self.parser = parser
         self.searchTimeout = (TimeInterval(configuration.maximumBroadcastsBeforeClosing) * configuration.maximumWaitResponseTime) + 0.1
+        
+        self.connectionController.delegate = self
     }
     
     // MARK: - Search
@@ -78,13 +74,8 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
         }
         
         os_log(.info, "SSDP search session starting")
-        // the maximumMessageSize value has been choosen at random
-        connectionGroup.setReceiveHandler { message, content, isComplete in
-            self.messageReceived(message: message, content: content, isComplete: isComplete)
-        }
         
-        connectionGroup.stateUpdateHandler = connectionStateDidChange(to:)
-        connectionGroup.start(queue: listeningQueue)
+        sendMSearchMessages()
         
         timeoutTimer = Timer.scheduledTimer(withTimeInterval: searchTimeout, repeats: false, block: { [weak self] (timer) in
             self?.searchTimedOut()
@@ -103,29 +94,6 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
         delegate?.searchSessionDidStopSearch(self, foundServices:servicesFoundDuringSearch)
     }
     
-    // MARK: - StateChange
-    
-    private func connectionStateDidChange(to state: NWConnectionGroup.State) {
-        switch state {
-        case .ready:
-            os_log(.info, "Connection is in the `ready` state")
-            sendMSearchMessages()
-        case .waiting(_):
-            os_log(.info, "Connection is in the `waiting` state")
-        case .setup:
-            os_log(.info, "Connection is in the `setup` state")
-        case .cancelled:
-            os_log(.info, "Connection is in the `cancelled` state")
-        case .failed(let error):
-            os_log(.info, "Connection is in the `failed` state")
-            let wrappedError = SSDPSearchSessionError.searchAborted(error)
-            delegate?.searchSession(self, didEncounterError: wrappedError)
-            close()
-        @unknown default:
-            os_log(.info, "Connection is in an `unknown` state")
-        }
-    }
-    
     // MARK: - Close
     
     private func close() {
@@ -134,10 +102,10 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
         timeoutTimer?.invalidate()
         timeoutTimer = nil
         
-        connectionGroup.cancel()
+        connectionController.close()
     }
     
-    // MARK: Write
+    // MARK: Send
     
     private func sendMSearchMessages() {
         let message = mSearchMessage
@@ -147,31 +115,22 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
             let interval = window / TimeInterval((configuration.maximumBroadcastsBeforeClosing - 1))
             
             broadcastTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { [weak self] (timer) in
-                self?.writeMessage(message)
+                self?.sendMessageToConnection(message)
             })
         }
-                
-        writeMessage(message)
+        sendMessageToConnection(message)
     }
     
-    private func writeMessage(_ message: String) {
-        os_log(.info, "Writing to connection: \r%{public}@", message)
-        
-        let data = message.data(using: .utf8)
-        connectionGroup.send(content: data) { error in
-            guard let error = error else {
-                return
-            }
-            os_log(.info, "Encountered error with sending: \r%{public}@", error.localizedDescription)
-        }
+    private func sendMessageToConnection(_ message: String) {
+        os_log(.info, "Sending message to connection: \r%{public}@", message)
+        connectionController.sendMessage(message)
     }
     
-    // MARK: - Read
+    // MARK: - MulticastConnectionControllerDelegate
     
-    private func messageReceived(message: NWConnectionGroup.Message, content: Data?, isComplete: Bool) {
-        guard let content = content,
-            !content.isEmpty,
-            let service = parser.parse(content),
+    func controller(_ controller: MulticastConnectionControllerProtocol, didReceiveResponse response: Data) {
+        guard !response.isEmpty,
+            let service = parser.parse(response),
             searchedForService(service),
             !servicesFoundDuringSearch.contains(service) else {
                 return
@@ -187,12 +146,11 @@ class SSDPSearchSession: SSDPSearchSessionProtocol {
     private func searchedForService(_ service: SSDPService) -> Bool {
         return service.searchTarget.contains(configuration.searchTarget) || configuration.searchTarget == "ssdp:all"
     }
-}
-
-private extension NWEndpoint.Port {
-    static let ssdp: NWEndpoint.Port = 1900
-}
-
-private extension NWEndpoint.Host {
-    static let ssdp: NWEndpoint.Host = "239.255.255.250"
+    
+    func controller(_ controller: MulticastConnectionControllerProtocol, didEncounterError error: Error) {
+        os_log(.info, "Encountered connection error: \r%{public}@", error.localizedDescription)
+        let wrappedError = SSDPSearchSessionError.searchAborted(error)
+        delegate?.searchSession(self, didEncounterError: wrappedError)
+        close()
+    }
 }
